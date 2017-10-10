@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <ul>
+    <li>
+      <a href="{% url 'model_form_upload' %}">Model Form Submit</a>
+    </li>
+  </ul>
+
+  <p>Recived Data:</p>
+
+  {% for data in information %}
+  <br>
+      NAME: {{ data.name }}
+    
+  <br>
+      MESSAGE:  {{data.message}}
+  <br>
+  {% endfor %}
+{% endblock %}
